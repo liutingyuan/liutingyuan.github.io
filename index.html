@@ -71,39 +71,54 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/08/UNIX系统命令笔记/">UNIX 终端命令笔记</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="UNIX-终端命令笔记"><a href="#UNIX-终端命令笔记" class="headerlink" title="UNIX 终端命令笔记"></a>UNIX 终端命令笔记</h1><h2 id="2017-03-09-晴"><a href="#2017-03-09-晴" class="headerlink" title="2017.03.09  晴"></a>2017.03.09  晴</h2><ul>
-<li>pwd 查看当前目录</li>
-<li>cd 切换目录<ul>
-<li><code>cd /Users/liutingyuan/hexo/source</code> 绝对目录切换</li>
-<li><code>cd hexo</code> 然后<code>cd source</code>层层深入切换</li>
-<li><code>cd ../</code>切换至上一级文件夹</li>
-<li><code>cd</code>切换至用户名文件夹（eg:liutingyuan）</li>
-<li><code>cd /</code>切换至根目录</li>
-</ul>
+        <h2 id="2017-03-09-晴"><a href="#2017-03-09-晴" class="headerlink" title="2017.03.09  晴"></a>2017.03.09  晴</h2><h3 id="查看当前目录"><a href="#查看当前目录" class="headerlink" title="查看当前目录"></a>查看当前目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">pwd</span></div></pre></td></tr></table></figure>
+<h3 id="切换目录"><a href="#切换目录" class="headerlink" title="切换目录"></a>切换目录</h3><ul>
+<li><h4 id="绝对目录切换"><a href="#绝对目录切换" class="headerlink" title="绝对目录切换"></a>绝对目录切换</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> /Users/liutingyuan/hexo/<span class="built_in">source</span></div></pre></td></tr></table></figure>
 </li>
-<li><code>mkdir test</code>新建文件夹</li>
-<li><code>touch test.txt</code>新建文件</li>
-<li><code>open test.txt</code>打开文件</li>
-<li><code>who</code>显示当前用户列表</li>
-<li><code>w</code>显示用户及行为信息</li>
-<li><code>ls</code>和<code>ls -l</code>显示文件列表，后者信息更详细</li>
-<li>修改打开文件的默认应用，eg:设置MacDown为打开.md文件的默认应用：<ul>
-<li><code>mdls hello-world.md</code>查看文件UTI(文件类型)</li>
-<li><code>osascript -e &#39;id of app &quot;MacDown&quot;&#39;</code>查看软件Bundle ID(应用标识符)</li>
-<li><code>duti -s com.uranusjr.macdown net.daringfireball.markdown</code><br><img src="http://Users/liutingyuan/hexo/imags/screen.png" alt="screen"></li>
-</ul>
-</li>
-<li><p><code>rm test.txt</code>删除文件</p>
-<p>后续跟新……</p>
+<li><h4 id="当前目录切换"><a href="#当前目录切换" class="headerlink" title="当前目录切换"></a>当前目录切换</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> hexo</div><div class="line">$ <span class="built_in">cd</span> <span class="built_in">source</span></div><div class="line">``` </div><div class="line"></div><div class="line">* <span class="comment">#### 切换至上一级文件夹</span></div><div class="line"> ```bash</div><div class="line"> $ <span class="built_in">cd</span> ../</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<ul>
+<li><h4 id="切换至用户文件夹（eg-liutingyuan）"><a href="#切换至用户文件夹（eg-liutingyuan）" class="headerlink" title="切换至用户文件夹（eg:liutingyuan）"></a>切换至用户文件夹（eg:liutingyuan）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><h4 id="切换至根目录"><a href="#切换至根目录" class="headerlink" title="切换至根目录"></a>切换至根目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> /</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h3><ul>
+<li><h4 id="新建文件夹"><a href="#新建文件夹" class="headerlink" title="新建文件夹"></a>新建文件夹</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ mkdir <span class="built_in">test</span></div></pre></td></tr></table></figure>
+</li>
+<li><h4 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ touch test.txt</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rm test.txt</div></pre></td></tr></table></figure>
+<h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ open test.txt</div></pre></td></tr></table></figure>
+<h3 id="显示用户列表"><a href="#显示用户列表" class="headerlink" title="显示用户列表"></a>显示用户列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ who</div></pre></td></tr></table></figure>
+<h3 id="显示用户及行为信息"><a href="#显示用户及行为信息" class="headerlink" title="显示用户及行为信息"></a>显示用户及行为信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ w</div></pre></td></tr></table></figure>
+<h3 id="显示文件列表"><a href="#显示文件列表" class="headerlink" title="显示文件列表"></a>显示文件列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ls</div></pre></td></tr></table></figure>
+<h3 id="显示文件列表及详细信息"><a href="#显示文件列表及详细信息" class="headerlink" title="显示文件列表及详细信息"></a>显示文件列表及详细信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ls <span class="_">-l</span></div></pre></td></tr></table></figure>
+<h3 id="修改打开文件的默认应用"><a href="#修改打开文件的默认应用" class="headerlink" title="修改打开文件的默认应用"></a>修改打开文件的默认应用</h3><p><a href="http://xiaoyu2er.github.io/2016/01/31/mac-default-app-for-spec-file-type/" target="_blank" rel="external">eg:</a>设置MacDown为打开.md文件的默认应用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ mdls hello-world.md </div><div class="line">$ osascript <span class="_">-e</span> <span class="string">'id of app "MacDown"'</span></div><div class="line">$ duti <span class="_">-s</span> com.uranusjr.macdown net.daringfireball.markdown</div></pre></td></tr></table></figure>
+<p> <img src="/Users/liutingyuan/hexo/imgs" alt="screen"></p>
+<p> 后续跟新……</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/08/UNIX系统命令笔记/" data-id="cj027xcl00000ko4c13lsub2o" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/08/UNIX系统命令笔记/" data-id="cj02fpm6b0000m44cjrda6kev" class="article-share-link">Share</a>
       
       
     </footer>
@@ -148,7 +163,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/02/hello-world/" data-id="cj027xcl40001ko4c3poubsj7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/02/hello-world/" data-id="cj02fpm6g0001m44c48oknu5z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -188,7 +203,7 @@
       <ul>
         
           <li>
-            <a href="/2017/03/08/UNIX系统命令笔记/">(no title)</a>
+            <a href="/2017/03/08/UNIX系统命令笔记/">UNIX 终端命令笔记</a>
           </li>
         
           <li>
