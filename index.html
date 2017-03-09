@@ -84,22 +84,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="查看当前目录"><a href="#查看当前目录" class="headerlink" title="查看当前目录"></a>查看当前目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pwd</div></pre></td></tr></table></figure>
-<h3 id="切换目录"><a href="#切换目录" class="headerlink" title="切换目录"></a>切换目录</h3><ul>
-<li><h4 id="绝对目录切换"><a href="#绝对目录切换" class="headerlink" title="绝对目录切换"></a>绝对目录切换</h4></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> /Users/liutingyuan/hexo/<span class="built_in">source</span></div></pre></td></tr></table></figure>
-<ul>
-<li><h4 id="当前目录切换"><a href="#当前目录切换" class="headerlink" title="当前目录切换"></a>当前目录切换</h4></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> hexo</div><div class="line">$ <span class="built_in">cd</span> <span class="built_in">source</span></div><div class="line">``` </div><div class="line"></div><div class="line">* <span class="comment">#### 切换至上一级文件夹</span></div><div class="line"></div><div class="line"> ```bash </div><div class="line"> $ <span class="built_in">cd</span> ../</div></pre></td></tr></table></figure>
-<ul>
-<li><h4 id="切换至用户文件夹（eg-liutingyuan）"><a href="#切换至用户文件夹（eg-liutingyuan）" class="headerlink" title="切换至用户文件夹（eg:liutingyuan）"></a>切换至用户文件夹（eg:liutingyuan）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><h4 id="切换至根目录"><a href="#切换至根目录" class="headerlink" title="切换至根目录"></a>切换至根目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> /</div></pre></td></tr></table></figure>
-</li>
-</ul>
 <h3 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h3><ul>
 <li><h4 id="新建文件夹"><a href="#新建文件夹" class="headerlink" title="新建文件夹"></a>新建文件夹</h4></li>
 </ul>
@@ -116,13 +100,17 @@
 <h3 id="显示文件列表及详细信息"><a href="#显示文件列表及详细信息" class="headerlink" title="显示文件列表及详细信息"></a>显示文件列表及详细信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ls <span class="_">-l</span></div></pre></td></tr></table></figure>
 <h3 id="修改打开文件的默认应用"><a href="#修改打开文件的默认应用" class="headerlink" title="修改打开文件的默认应用"></a>修改打开文件的默认应用</h3><p><a href="http://xiaoyu2er.github.io/2016/01/31/mac-default-app-for-spec-file-type/" target="_blank" rel="external">eg:</a>设置MacDown为打开.md文件的默认应用：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ mdls hello-world.md </div><div class="line">$ osascript <span class="_">-e</span> <span class="string">'id of app "MacDown"'</span></div><div class="line">$ duti <span class="_">-s</span> com.uranusjr.macdown net.daringfireball.markdown</div></pre></td></tr></table></figure>
-<p> <img src="/Users/liutingyuan/hexo/imgs" alt="screen"></p>
+<p> <img src="/Users/liutingyuan/Desktop/screen.png" alt="screen"></p>
+<h3 id="切换目录"><a href="#切换目录" class="headerlink" title="切换目录"></a>切换目录</h3><h4 id="绝对目录切换"><a href="#绝对目录切换" class="headerlink" title="绝对目录切换"></a>绝对目录切换</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> /Users/liutingyuan/hexo/<span class="built_in">source</span></div></pre></td></tr></table></figure>
+<h4 id="当前目录切换"><a href="#当前目录切换" class="headerlink" title="当前目录切换"></a>当前目录切换</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> hexo</div><div class="line">$ <span class="built_in">cd</span> <span class="built_in">source</span></div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">#### 切换至上一级文件夹</span></div><div class="line"></div><div class="line"> ```bash </div><div class="line"> $ <span class="built_in">cd</span> ../</div></pre></td></tr></table></figure>
+<h4 id="切换至用户文件夹（eg-liutingyuan）"><a href="#切换至用户文件夹（eg-liutingyuan）" class="headerlink" title="切换至用户文件夹（eg:liutingyuan）"></a>切换至用户文件夹（eg:liutingyuan）</h4> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span></div></pre></td></tr></table></figure>
+<h4 id="切换至根目录"><a href="#切换至根目录" class="headerlink" title="切换至根目录"></a>切换至根目录</h4>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> /</div></pre></td></tr></table></figure>
 <p> 后续跟新……</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/08/UNIX系统命令笔记/" data-id="cj02g4tue0001nu4c3eyfk9yu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/08/UNIX系统命令笔记/" data-id="cj02ju4lh0000di4cuh9gt7xt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -167,7 +155,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/02/hello-world/" data-id="cj02g4tu90000nu4c3ehs31y8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/02/hello-world/" data-id="cj02ju4ll0001di4cz834yed7" class="article-share-link">Share</a>
       
       
     </footer>
