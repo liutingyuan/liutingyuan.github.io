@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JavaScript疑难笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第四章 变量、作用域和内存问题
+[ ] 按值传递与按引用传递的区别？
+[ ] P25 属性、方法、对象的概念？
+[ ] P77 不声明就直接初始化的例子？eg:a = 10？因为未使用var？
+[ ] P78 如何理解这句话？如果有一个操作数是对象，而另一个操作数不是，则会在对象上调用valueOf()方法......
+[ ] P79 引用计数法的加一和减一规则？
+[ ] P80 利用myObje">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript疑难笔记">
+<meta property="og:url" content="http://yoursite.com/2017/03/10/ab/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第四章 变量、作用域和内存问题
+[ ] 按值传递与按引用传递的区别？
+[ ] P25 属性、方法、对象的概念？
+[ ] P77 不声明就直接初始化的例子？eg:a = 10？因为未使用var？
+[ ] P78 如何理解这句话？如果有一个操作数是对象，而另一个操作数不是，则会在对象上调用valueOf()方法......
+[ ] P79 引用计数法的加一和减一规则？
+[ ] P80 利用myObje">
+<meta property="og:updated_time" content="2017-03-10T15:05:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript疑难笔记">
+<meta name="twitter:description" content="第四章 变量、作用域和内存问题
+[ ] 按值传递与按引用传递的区别？
+[ ] P25 属性、方法、对象的概念？
+[ ] P77 不声明就直接初始化的例子？eg:a = 10？因为未使用var？
+[ ] P78 如何理解这句话？如果有一个操作数是对象，而另一个操作数不是，则会在对象上调用valueOf()方法......
+[ ] P79 引用计数法的加一和减一规则？
+[ ] P80 利用myObje">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ab" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/10/ab/" class="article-date">
+  <time datetime="2017-03-10T06:31:49.000Z" itemprop="datePublished">2017-03-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript疑难笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第四章-变量、作用域和内存问题"><a href="#第四章-变量、作用域和内存问题" class="headerlink" title="第四章 变量、作用域和内存问题"></a>第四章 变量、作用域和内存问题</h2><ol>
+<li>[ ] <strong>按值传递与按引用传递的区别</strong>？</li>
+<li>[ ] P25 属性、方法、对象的概念？</li>
+<li>[ ] P77 不声明就直接初始化的例子？eg:<code>a = 10</code>？因为未使用<code>var</code>？</li>
+<li>[ ] P78 如何理解这句话？<br><code>如果有一个操作数是对象，而另一个操作数不是，则会在对象上调用</code>valueOf()<code>方法......</code></li>
+<li>[ ] P79 引用计数法的加一和减一规则？</li>
+<li>[ ] P80 利用<code>myObject.element = null;</code>和<code>element.someObject = null;</code>是如何切断变量和引用值之间的联系？</li>
+<li>[ ] P85 使用变量来访问属性什么意思？</li>
+</ol>
+<h2 id="第五章-引用类型"><a href="#第五章-引用类型" class="headerlink" title="第五章 引用类型"></a>第五章 引用类型</h2><ol>
+<li>[ ] P92 5.2.5 字符串升序排序规则？eg:<code>[0,1,5,10,15]</code>排序后为<code>[0,1,10,15,5]</code></li>
+<li><p>[ ] P96 5.2.7 位置方法？以下变量的区别？</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var person = &#123; name: <span class="string">"Nicholas"</span> &#125;;</div><div class="line">var people = [&#123; name: <span class="string">"Nicholas"</span> &#125;];</div><div class="line">var morePeople = [person];</div></pre></td></tr></table></figure>
+</li>
+<li><p>[ ] P97 5.2.8 JS的函数格式？不需要if函数？</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var numbers = [1,2,3,4,5,4,3,2,1];</div><div class="line">var everyResult = numbers.every(<span class="keyword">function</span>(item, index, array)&#123;</div><div class="line"><span class="built_in">return</span> (item &gt; 2);</div><div class="line">&#125;);</div><div class="line">alert (everyResult);      //<span class="literal">false</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>[ ] P96 5.2.8 forEach()方法是否会改变数组中的值？</p>
+</li>
+<li>[ ] P102 5.3.3 <code>UTC日期指在没有市区偏差情况下......</code>中的时区偏差？</li>
+<li>[ ] P105 5.4.0 有两段不明白，使用字面量和RegExp函数的区别？</li>
+<li>[ ] P104 5.4.0 字面量模式和等价的字符串的对应关系？为什么是双斜杠？</li>
+<li>[ ] P106 5.4.2 捕获组？正则表达式中括号的应用？正则表达式的学习</li>
+<li>[ ] P106 5.4.2 <ul>
+<li>index表示匹配项在字符串还是数组中的位置？</li>
+<li>exec()函数返回的数组有疑问，为什么lastIndex每次调用此函数时都增加？</li>
+</ul>
+</li>
+<li>[ ] P113 5.5.3 object[propertyName]可取得属性的值？sort()方法内嵌比较函数有疑问</li>
+<li>[x]各浏览器最新版本？<ul>
+<li>IE 11(Win10自带)</li>
+<li>Safari 10.0(macOS)</li>
+<li>FireFox 50.1 (2016.12.13)</li>
+<li>Opera 42</li>
+</ul>
+</li>
+<li>[ ] P126 字符串大小写转换方法会改变字符串变量本身吗？</li>
+<li>[ ] P128 replace()方法中，当第二个参数为函数时，函数的三个参数中，最后一个原始字符串指？</li>
+<li>[ ] P128 split()方法的分隔用法不懂</li>
+</ol>
+<h2 id="第六章-面向对象的程序设计"><a href="#第六章-面向对象的程序设计" class="headerlink" title="第六章 面向对象的程序设计"></a>第六章 面向对象的程序设计</h2><ol>
+<li>[ ] P141 <em>year前的</em>，表示只能通过对象方法访问的属性？</li>
+<li>[ ] P144 6.1.3 代码中<code>alert(typeof descriptor.get);</code>为什么是<code>function</code>？</li>
+<li>[ ] P149 理解原型对象，isPrototypeOf()方法返回true怎么理解？</li>
+<li>[ ] P144 6.2.0 <code>使用同一个接口创建同一个对象</code>中<code>同一个接口</code>指object()函数？</li>
+<li>[ ] P147 6.2.1(2) <code>alert(person1.sayName = person2.sayName);   //false</code>？sayName里保存的指针不一样吗？</li>
+<li>[ ] P161 6.2.6 寄生构造函数模式不懂，<code>values.push.apply(values.arguements);</code>此步为什么可以初始化数组的值？</li>
+<li>[ ] P153 for-in 循环举例，不懂使用</li>
+<li>[ ] P161 6.2.7 稳妥构造函数？</li>
+<li>[ ] P166 <code>必须在用SuperType的实例替换原型后再定义这两个方法</code>？为什么是两个？为什么不能之前定义getSubValue？</li>
+<li>[x] P169 6.3.3 注意设置此代码：<code>SubType.prototype.constructor = SubType;</code></li>
+<li>[ ] P172 6.3.6 寄生组合式继承？</li>
+<li>[ ] P172 6.3.6 增强对象？</li>
+</ol>
+<h2 id="第七章-函数表达式"><a href="#第七章-函数表达式" class="headerlink" title="第七章 函数表达式"></a>第七章 函数表达式</h2><ol>
+<li>[ ] P177 7.1 结果指向原始函数的引用只剩下一个？</li>
+<li>[ ] P178 7.2 代码段中调用对象的属性为什么是中括号<code>object[propertyName]</code>而不是点？</li>
+<li>[ ] P181 7.2.1 闭包和匿名函数的区别？为什么返回的都是10？</li>
+<li>[ ] P70 4.1.2 <code>var obj1 = new Object()</code>此时存储在<code>obj1</code>中的值是否为一个指针？</li>
+<li>[x] P190 7.4.2 左上角代码的最后为什么有（），不应该是<code>(function(){})()</code>吗？<br>答：函数声明后不可以跟（），但函数表达式后可以。</li>
+</ol>
+<h2 id="第八章-BOM"><a href="#第八章-BOM" class="headerlink" title="第八章 BOM"></a>第八章 BOM</h2><ol>
+<li>[ ] P197 8.1.3 <code>typeof window.screenLeft == &quot;number&quot; ? window.screenLeft : window.screenX</code>，双等号用法中将前者转化成了什么？</li>
+<li>[ ] P202 try {} catch (){}用法</li>
+<li>[ ] P197 8.1.3 浏览器工具栏的像素高度？</li>
+<li>[ ] P201 <code>opener属性指向调用window.open()的窗口或框架</code>，为什么<code>alert (wroxWin.open == window);     //true</code>？</li>
+<li>[ ] P207 8.2 URL、hash、散列、查询字符串概念？</li>
+<li>[ ] P209 8.2.2 修改URL的代码是一连串还是只在初始值中修改？</li>
+<li>[x] P208 8.2.1 左上角代码为什么用逗号而不是分号？<br>答：逗号代表一个语句尚未结束。</li>
+<li>[ ] P214 8.4 像素宽度？像素高度？DPI?屏幕像素高度？</li>
+</ol>
+<h2 id="第九章-客户端检测"><a href="#第九章-客户端检测" class="headerlink" title="第九章 客户端检测"></a>第九章 客户端检测</h2><ol>
+<li>[ ] P224 Gecko、Webkit呈现引擎了解，流行站点？浏览器工作原理、工作过程？</li>
+<li>[ ] P224 兼容模式和混杂模式概念？</li>
+<li>[ ] P229 代码中<code>return {engine: engine}</code>什么意思？</li>
+<li>[ ] P256 http协议？域名系统知识回顾</li>
+<li>[ ] P258 <code>所有单选按钮必须具有相同name属性</code>？单选按钮？</li>
+</ol>
+<h2 id="第十章"><a href="#第十章" class="headerlink" title="第十章"></a>第十章</h2><ol>
+<li>[ ] P255 为什么修改<code>document.title</code>属性的值不会改变<code>&lt;title&gt;</code>，而在P263(1)中则是：<code>对title的修改只会在鼠标移动到这个元素之上时才会显示出去</code>？</li>
+<li>[ ] P269 代码换行要<code>+</code>？</li>
+<li>[ ] P272 <code>element.childNodes.length</code>代表什么？</li>
+<li>[ ] P272 代码块疑问：为什么<code>element.childNodes.length = 2</code>，而不是<code>3</code>，是否特性<code>name</code>不是<code>element</code>的节点？</li>
+</ol>
+<h2 id="第十一章"><a href="#第十一章" class="headerlink" title="第十一章"></a>第十一章</h2><ol>
+<li>[ ] P293 字符集？UTF-16?</li>
+<li>[ ] P297  <code>ul.innerHTML += &quot;&lt;li&gt;&quot; + value[i] + &quot;&lt;li&gt;&quot;</code>？</li>
+<li>[ ] P300 11.4.3 <code>document.element</code>指<code>&lt;html&gt;</code>元素吗？<code>alert(!!(result &amp; 16));    //20</code>？</li>
+<li>[ ] P296 <code>插入HTML（用innerHTML）前，要先以可靠方式处理HTML</code>要处理掉的是什么？事件处理程序属性？什么是无害的HTML？</li>
+<li>[ ] P302 对HTML编码不懂，<code>&lt; &gt; &amp; &quot; &quot;</code>此类符号如用在<code>innerHMTL</code>中，需要先转义或编码吗？</li>
+</ol>
+<p>更新中……</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/10/ab/" data-id="cj03yr4z30000hm4c38ad1iy5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/10/abc/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          abc
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/08/unix/unix/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">UNIX 终端命令笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/10/abc/">abc</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/10/ab/">JavaScript疑难笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/08/unix/unix/">UNIX 终端命令笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/02/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
