@@ -3,14 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>aboutJS | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="第四章 变量、作用域和内存问题
+[ ] 按值传递与按引用传递的区别？
+[ ] P25 属性、方法、对象的概念？
+[ ] P77 不声明就直接初始化的例子？eg:a = 10？因为未使用var？
+[ ] P78 如何理解这句话？如果有一个操作数是对象，而另一个操作数不是，则会在对象上调用valueOf()方法......
+[ ] P79 引用计数法的加一和减一规则？
+[ ] P80 利用myObje">
+<meta property="og:type" content="article">
+<meta property="og:title" content="aboutJS">
+<meta property="og:url" content="http://yoursite.com/2017/03/11/aboutJS/aboutJS/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第四章 变量、作用域和内存问题
+[ ] 按值传递与按引用传递的区别？
+[ ] P25 属性、方法、对象的概念？
+[ ] P77 不声明就直接初始化的例子？eg:a = 10？因为未使用var？
+[ ] P78 如何理解这句话？如果有一个操作数是对象，而另一个操作数不是，则会在对象上调用valueOf()方法......
+[ ] P79 引用计数法的加一和减一规则？
+[ ] P80 利用myObje">
+<meta property="og:updated_time" content="2017-03-10T16:09:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="aboutJS">
+<meta name="twitter:description" content="第四章 变量、作用域和内存问题
+[ ] 按值传递与按引用传递的区别？
+[ ] P25 属性、方法、对象的概念？
+[ ] P77 不声明就直接初始化的例子？eg:a = 10？因为未使用var？
+[ ] P78 如何理解这句话？如果有一个操作数是对象，而另一个操作数不是，则会在对象上调用valueOf()方法......
+[ ] P79 引用计数法的加一和减一规则？
+[ ] P80 利用myObje">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +81,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-aboutJS/aboutJS" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-aboutJS/aboutJS" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/03/11/aboutJS/aboutJS/" class="article-date">
   <time datetime="2017-03-10T16:07:45.000Z" itemprop="datePublished">2017-03-11</time>
@@ -74,8 +94,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/11/aboutJS/aboutJS/">aboutJS</a>
+    <h1 class="article-title" itemprop="name">
+      aboutJS
     </h1>
   
 
@@ -187,123 +207,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-unix/unix" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/08/unix/unix/" class="article-date">
-  <time datetime="2017-03-08T14:32:46.000Z" itemprop="datePublished">2017-03-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/08/unix/unix/">UNIX 终端命令笔记</a>
-    </h1>
+    <a href="/2017/03/08/unix/unix/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">UNIX 终端命令笔记</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="查看当前目录"><a href="#查看当前目录" class="headerlink" title="查看当前目录"></a>查看当前目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pwd</div></pre></td></tr></table></figure>
-<h3 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h3><ul>
-<li><h4 id="新建文件夹"><a href="#新建文件夹" class="headerlink" title="新建文件夹"></a>新建文件夹</h4></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ mkdir <span class="built_in">test</span></div></pre></td></tr></table></figure>
-<ul>
-<li><h4 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h4></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ touch test.txt</div></pre></td></tr></table></figure>
-<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rm test.txt</div></pre></td></tr></table></figure>
-<h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ open test.txt</div></pre></td></tr></table></figure>
-<h3 id="显示用户列表"><a href="#显示用户列表" class="headerlink" title="显示用户列表"></a>显示用户列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ who</div></pre></td></tr></table></figure>
-<h3 id="显示用户及行为信息"><a href="#显示用户及行为信息" class="headerlink" title="显示用户及行为信息"></a>显示用户及行为信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ w</div></pre></td></tr></table></figure>
-<h3 id="显示文件列表"><a href="#显示文件列表" class="headerlink" title="显示文件列表"></a>显示文件列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ls</div></pre></td></tr></table></figure>
-<h3 id="显示文件列表及详细信息"><a href="#显示文件列表及详细信息" class="headerlink" title="显示文件列表及详细信息"></a>显示文件列表及详细信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ls <span class="_">-l</span></div></pre></td></tr></table></figure>
-<h3 id="修改打开文件的默认应用"><a href="#修改打开文件的默认应用" class="headerlink" title="修改打开文件的默认应用"></a>修改打开文件的默认应用</h3><p><a href="http://xiaoyu2er.github.io/2016/01/31/mac-default-app-for-spec-file-type/" target="_blank" rel="external">eg:</a>设置MacDown为打开.md文件的默认应用：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ mdls hello-world.md </div><div class="line">$ osascript <span class="_">-e</span> <span class="string">'id of app "MacDown"'</span></div><div class="line">$ duti <span class="_">-s</span> com.uranusjr.macdown net.daringfireball.markdown</div></pre></td></tr></table></figure>
-<h3 id="切换目录"><a href="#切换目录" class="headerlink" title="切换目录"></a>切换目录</h3><ul>
-<li><p>绝对目录切换 <code>$ cd /Users/liutingyuan/hexo/source</code></p>
-</li>
-<li><p>当前目录切换<code>$ cd hexo  $ cd source</code></p>
-</li>
-<li><p>切换至上一级文件夹 <code>$ cd ../</code></p>
-</li>
-<li><p>切换至用户文件夹（eg:liutingyuan）<code>$ cd</code></p>
-</li>
-<li><p>切换至根目录<code>$ cd /</code></p>
-</li>
-</ul>
-<h3 id="重命名文件"><a href="#重命名文件" class="headerlink" title="重命名文件"></a>重命名文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ mv oldName newName</div></pre></td></tr></table></figure>
-<h3 id="移动文件-交互式"><a href="#移动文件-交互式" class="headerlink" title="移动文件(交互式)"></a>移动文件(交互式)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv -i file toPath</div></pre></td></tr></table></figure>
-<p> 持续跟新……</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/08/unix/unix/" data-id="cj040r8hd0001l64c7xr2w8lf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/02/hello-world/" class="article-date">
-  <time datetime="2017-03-02T14:29:35.000Z" itemprop="datePublished">2017-03-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/02/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/02/hello-world/" data-id="cj040r8gq0000l64cudz1zvq7" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
