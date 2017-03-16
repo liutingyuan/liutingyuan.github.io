@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -92,7 +92,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/16/sublime/" data-id="cj0cf53qh0002oq4cphlnq82d" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/03/16/sublime/" data-id="cj0clalne0003qw4c8y8qc9ox" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sublime-text/">sublime text</a></li></ul>
@@ -129,15 +129,16 @@
         <p>语法糖：<code>JSX</code>，即<code>JavaScript XML</code>，不影响JS语法解析。</p>
 <p>网址：<a href="https://facebook.github.io/react/index.html" target="_blank" rel="external">facebook.github.io</a></p>
 <p>首先导入<code>JSX.Transformer.js</code>解析库和<code>react.js</code>库:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"utf-8"</span>&gt;</div><div class="line">    &lt;title&gt;Example&lt;/title&gt;</div><div class="line">    &lt;script src=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/JSX"</span>&gt;</div><div class="line">      <span class="keyword">function</span> <span class="function"><span class="title">testJSX</span></span>()&#123;</div><div class="line">      <span class="built_in">return</span> (&lt;div&gt;<span class="built_in">test</span> JSX&lt;/div&gt;)</div><div class="line">      &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;div id=<span class="string">"test"</span>&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"utf-8"</span>&gt;</div><div class="line">    &lt;title&gt;Example&lt;/title&gt;</div><div class="line">    &lt;script src=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/JSX"</span>&gt;</div><div class="line">      <span class="keyword">function</span> <span class="function"><span class="title">testJSX</span></span>()&#123;</div><div class="line">      <span class="built_in">return</span> &lt;div&gt;<span class="built_in">test</span> JSX&lt;/div&gt;</div><div class="line">      &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;div id=<span class="string">"test"</span>&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
 <p>js外部文件如下:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var Hello = React.creatClass(&#123;</div><div class="line">     render: <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">       var styleObj = &#123;</div><div class="line">       color: <span class="string">'red'</span>,</div><div class="line">       fontSize: <span class="string">'44px'</span></div><div class="line">       &#125;;</div><div class="line">         <span class="built_in">return</span> (&lt;div stlye=&#123;styleObj&#125;&gt;Hello &#123;this.props.name&#125;&lt;/div&gt;);</div><div class="line">      &#125;</div><div class="line"> &#125;)</div><div class="line"> </div><div class="line"> React.render(&lt;Hello name=<span class="string">"World"</span>/&gt;,</div><div class="line"> document.getElementById(<span class="string">'test'</span>))；</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var Hello = React.creatClass(&#123;</div><div class="line">     render: <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">       var styleObj = &#123;</div><div class="line">       color: <span class="string">'red'</span>,</div><div class="line">       fontSize: <span class="string">'44px'</span></div><div class="line">       &#125;;</div><div class="line">         <span class="built_in">return</span> &lt;div stlye=&#123;styleObj&#125;&gt;Hello &#123;this.props.name&#125;&lt;/div&gt;;</div><div class="line">      &#125;</div><div class="line"> &#125;)</div><div class="line"> </div><div class="line"> React.render(&lt;Hello name=<span class="string">"World"</span>/&gt;,</div><div class="line"> document.getElementById(<span class="string">'test'</span>))；</div></pre></td></tr></table></figure>
 <p><strong>备注：</strong>CSS内联样式要传入对象，对象中CSS对应的属性名采用驼峰法，如：<code>fontSize</code>而不是<code>font-size</code>。标签中的JS代码一律用<code>{}</code>包含。</p>
+<p>持续更新……</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/16/react/" data-id="cj0cf53qd0001oq4c4zreozsv" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/03/16/react/" data-id="cj0claln50000qw4cqcehbzaa" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
@@ -178,7 +179,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/11/jsReview/jsReview/" data-id="cj0cf53ra0007oq4c7s1fg7yp" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/03/11/jsReview/jsReview/" data-id="cj0clalnx0007qw4cs9lns93i" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -308,7 +309,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/11/aboutJS/aboutJS/" data-id="cj0cf53rb0008oq4c2nmfpmum" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/03/11/aboutJS/aboutJS/" data-id="cj0clalo2000aqw4c433817ic" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -388,7 +389,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/08/unix/unix/" data-id="cj0cf53rc000aoq4cso2dqc70" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/03/08/unix/unix/" data-id="cj0clalo10008qw4chxslqxbm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -433,7 +434,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/02/hello-world/" data-id="cj0cf53q80000oq4cfz09g3ki" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/03/02/hello-world/" data-id="cj0claln90001qw4cc8qhop6k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -453,7 +454,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime-text/">sublime text</a></li></ul>
     </div>
@@ -463,7 +464,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/sublime-text/" style="font-size: 10px;">sublime text</a>
     </div>
@@ -482,7 +483,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -519,7 +520,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
